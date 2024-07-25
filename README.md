@@ -2,6 +2,10 @@
 
 **radioROS** is a simple Python-based ROS2 package that allows robots to utilize an RC receiver in their projects. This package should theoretically work for any receiver since there is an ESP32 that carefully reads the PWM data and publishes it via serial. Other packages use SBUS, which is not standardized, and most receivers don't have this feature, and those that do are expensive.
 
+![image](https://github.com/user-attachments/assets/2481bc46-0bf0-4c46-ac5b-8a36afa3a52b)
+
+![image](https://github.com/user-attachments/assets/316cd695-f004-469e-a912-12977a2e2801)
+
 ## Getting Started
 
 ### Hardware Setup
