@@ -6,7 +6,7 @@
 
 ### Hardware Setup
 
-1. First, get an ESP32 and upload the `esp32_code` that's within the repo.
+1. First, get an ESP32 and upload the `esp32_code.ino` that's within the `firmware` directory.
 2. Connect the ESP32 to the receiver as follows:
    
    ![image](https://github.com/user-attachments/assets/5c478eb2-cfaa-4c08-a674-800af1c13867)
@@ -45,3 +45,11 @@ The package contains two nodes:
 - `pwm_to_twist` can only work if `pwm_publisher` is running.
 - `pwm_publisher` only works if the transmitter is powered on, so the ESP32 is publishing PWM data.
 
+## Firmware for ESP32
+
+The ESP32 code required to make this ROS2 package work can be found in the `firmware` directory. Follow these steps to upload the code to your ESP32:
+
+1. Open the `esp32_code.ino` file located in the `firmware` directory using the Arduino IDE or any other compatible IDE.
+2. Connect your ESP32 to your computer.
+3. Select the correct board and port in the IDE.
+4. Upload the code to the ESP32.
