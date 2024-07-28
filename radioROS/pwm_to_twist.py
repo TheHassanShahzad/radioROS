@@ -41,7 +41,7 @@ class JoystickToTwist(Node):
             twist.angular.z = angular_speed
 
             self.publisher_.publish(twist)
-            self.get_logger().info(f"Published twist: linear.x = {linear_speed}, angular.z = {angular_speed}")
+            # self.get_logger().info(f"Published twist: linear.x = {linear_speed}, angular.z = {angular_speed}")
 
     def map_range(self, value, left_min, left_max, right_min, right_max):
         # Map the value from one range to another
