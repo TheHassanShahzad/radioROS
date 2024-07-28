@@ -16,13 +16,14 @@ class PwmPublisher(Node):
         self.declare_parameter('serial_port', '/dev/ttyUSB0')
         self.publisher_ = self.create_publisher(Int16MultiArray, '/receiver_data', 10)
         self.serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
+        self.get_logger().info("Receiver node started")
         self.get_logger().info(f"Using serial port: {self.serial_port}")
 
     def publish_data(self, value1, value2, value3, value4, value5, value6):
         msg = Int16MultiArray()
         msg.data = [value1, value2, value3, value4, value5, value6]
         self.publisher_.publish(msg)
-        self.get_logger().info(f"Published: {msg.data}")
+        # self.get_logger().info(f"Published: {msg.data}")
 
 def main(args=None):
     rclpy.init(args=args)
